@@ -1,0 +1,33 @@
+[package]
+name = "first_rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[build]
+target = "x86_64-pc-windows-gnu"
+jobs = 1
+rustflags = ["-C", "debuginfo=0"]
+
+[profile.dev]
+opt-level = 0
+debug = 0
+incremental = true
+codegen-units = 256
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[net]
+git-fetch-with-cli = true
+
+[registries.crates-io]
+protocol = "sparse"
+
+[target.x86_64-pc-windows-gnu]
+rustflags = ["-C", "link-args=-s"]
