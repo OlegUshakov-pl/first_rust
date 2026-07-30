@@ -1,4 +1,4 @@
-![Rust])(./image.jpg)
+![Rust](./image.jpg)
 
 ### I started to learn Rust
 
