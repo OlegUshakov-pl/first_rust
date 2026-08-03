@@ -1,6 +1,7 @@
+
+
 fn main() {
-    let a=10;
-    let b=20;
-    let c=a+b;
+    let mut c=20;
+    c=c+30;
     println!("Hello RS!!! {c}");
 }
