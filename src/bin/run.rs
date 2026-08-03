@@ -1,7 +1,10 @@
 
 
+
 fn main() {
-    let mut c=20;
-    c=c+30;
-    println!("Hello RS!!! {c}");
+    let pi=std::f64::consts::PI;
+    let s: &str = "hello"; // &str
+    let s: String = s.to_uppercase(); // String
+    println!("{s}"); // HELLO
+    println!("{}",pi );
 }
